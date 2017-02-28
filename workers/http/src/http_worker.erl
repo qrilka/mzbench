@@ -27,6 +27,7 @@
 
 -spec initial_state() -> state().
 initial_state() ->
+    inet_db:set_lookup([dns]),
     application:set_env(hackney, use_default_pool, false),
     #state{}.
 
